@@ -6,8 +6,8 @@
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div class="flex flex-wrap">
-  {% for album in albumss %}
-  
+  {% for album in albums %}
+  <img src="{{album.albumcover}}" alt="">
     <a href="{% url 'show_album' pk=album.pk %}">
       <h2>{{ album.title }}</h2>
     </a>
@@ -28,8 +28,8 @@
     {% endif %}
 
     <p>
-      <a href="{% url 'edit_album' pk=album.pk %}">Edit Contact</a><br>
-      <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Contact</a>
+      <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>
+      <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
     </p>
   
   {% endfor %}

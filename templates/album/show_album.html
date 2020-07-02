@@ -6,7 +6,7 @@
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
 
 <div class="flex flex-wrap">
-  {% for album in albumss %}
+  {% for album in albums %}
   <div class="w-33 pa3">
     <a href="{% url 'show_album' pk=album.pk %}">
       <h2>{{ album.title }}</h2>
